@@ -22,14 +22,13 @@
     </p>
   </div>
 
-  <div v-else-if="pending" class="text-center py-12">Loading...</div>
   <div v-else-if="error" class="text-center py-12 text-red-500">
     Error loading data
   </div>
 </template>
 
 <script setup lang="ts">
-const { data, pending, error } = await useAsyncData("aboutData", () =>
+const { data, error } = await useAsyncData("aboutData", () =>
   $fetch("/data.json")
 );
 </script>

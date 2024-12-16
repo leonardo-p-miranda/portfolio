@@ -20,12 +20,10 @@
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="flex-grow">
       <NuxtPage />
     </main>
 
-    <!-- Global Footer -->
     <Footer :name="data?.name" />
   </div>
 </template>
@@ -34,5 +32,4 @@
 const { data, error } = await useAsyncData("globalData", () =>
   $fetch("/data.json")
 );
-// If there's an error or data is null, data?.name will be undefined, but Footer handles that gracefully.
 </script>

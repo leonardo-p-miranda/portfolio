@@ -91,9 +91,15 @@
       "description": "A next-gen property listing platform with advanced search, filtering, and SEO optimization.",
       "stack": "Vue, Nuxt, Node, TailwindCSS",
       "demoUrl": "https://venando.dk"
+    },
+    {
+      "title": "Dental Heel Health Management System (Petrus)",
+      "description": "A system for managing patient records, appointments, and inegration with innovative plasma dental pen",
+      "stack": "Vue, Electron, PHP",
+      "demoUrl": "https://petrus.navi.ifrn.edu.br/login"
     }
   ],
-  "languages": ["English C2", "Spanish C2", "Danish C2", "French B2"], 
+  "languages": ["English C2", "Spanish C2", "Danish C2", "French B2"],
   "skills": [
     "Vue.js",
     "Nuxt 3",

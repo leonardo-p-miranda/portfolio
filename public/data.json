@@ -79,7 +79,21 @@
       "period": "2016 - 2020"
     }
   ],
-  "languages": ["English (C2)", "Spanish (C2)", "Danish (C2)", "French (B2)"],
+  "projects": [
+    {
+      "title": "Freelancer Marketplace (O Mercado de Trabalho)",
+      "description": "A platform connecting freelancers and clients, providing project listings, messaging, and secure payments.",
+      "stack": "Vue, Node, Nuxt, NoSQL",
+      "demoUrl": "https://omercadodetrabalho.com.br/"
+    },
+    {
+      "title": "Real Estate Sales Application (Venando)",
+      "description": "A next-gen property listing platform with advanced search, filtering, and SEO optimization.",
+      "stack": "Vue, Nuxt, Node, TailwindCSS",
+      "demoUrl": "https://venando.dk"
+    }
+  ],
+  "languages": ["English C2", "Spanish C2", "Danish C2", "French B2"], 
   "skills": [
     "Vue.js",
     "Nuxt 3",

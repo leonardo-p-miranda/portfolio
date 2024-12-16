@@ -9,7 +9,9 @@
         :key="index"
         class="border p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
       >
-        <h3 class="text-xl font-bold">{{ job.role }} @ {{ job.company }}</h3>
+        <h3 class="text-xl font-bold">
+          {{ job.role }} @ <a :href="job.link" target="_blank" class="underline hover:text-gray-800">{{ job.company }}</a>
+        </h3>
         <p class="text-sm text-gray-600">
           {{ job.location }} • {{ job.duration }}
         </p>
@@ -32,6 +34,7 @@ interface Job {
   duration: string;
   stack: string;
   responsibilities: string[];
+  link?: string;
 }
 
 const props = defineProps<{

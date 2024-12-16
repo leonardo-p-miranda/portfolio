@@ -1,7 +1,7 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
   app: {
-    baseURL: "https://leonardo-p-miranda.github.io/portfolio",                            
+    baseURL: '/portfolio/',
     head: {
       title: "Leonardo Miranda",
       meta: [

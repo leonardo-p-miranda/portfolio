@@ -1,7 +1,7 @@
 <template>
   <footer class="py-6 text-center text-gray-600 border-t mt-auto">
     <p>
-      &copy; {{ new Date().getFullYear() }} {{ name || "My Portfolio" }}. All
+      &copy; {{ new Date().getFullYear() }} {{ name }}. All
       rights reserved.
     </p>
   </footer>

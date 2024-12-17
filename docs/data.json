@@ -5,7 +5,7 @@
   "email": "dev.leonardomiranda@gmail.com",
   "linkedin": "https://linkedin.com/in/leonardopmiranda",
   "github": "https://github.com/leonardo-p-miranda",
-  "summary": "Software Engineer experienced in building robust, high-traffic applications using modern stacks like Vue, Nuxt, Node, and React. Passionate about Agile methodologies, xTreme Programming, and contributing to the Erlang/Elixir community.",
+  "summary": "Software Engineer experienced in building high-traffic applications using modern stacks like Vue, Nuxt, Node, and React. Highly engaged in Agile methodologies, xTreme Programming, and contributing to the Erlang/Elixir community.",
   "experience": [
     {
       "role": "Software Engineer (Fullstack)",
@@ -34,14 +34,14 @@
     },
     {
       "role": "Researcher",
-      "company": "UFMG / DASHBIT",
+      "company": "UFMG (LAC) in partnership with DASHBIT",
       "link": "https://dcc.ufmg.br/compiladores/",
       "location": "Brazil",
       "duration": "Feb 2022 - Feb 2023",
       "stack": "Elixir, Erlang, Functional Programming, C+",
       "responsibilities": [
         "Engineered a branch coverage system for Erlang and extended it to Elixir",
-        "Collaborated with the Dashbit (Elixir) team, enhancing Erlang/Elixir ecosystems",
+        "Collaborated with the Elixir team, enhancing Erlang/Elixir ecosystems",
         "Delivered presentations on advanced Erlang testing tools"
       ]
     },

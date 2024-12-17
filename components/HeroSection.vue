@@ -5,7 +5,7 @@
     <div class="max-w-2xl mx-auto">
       <h1 class="text-4xl font-bold">
         <!-- <span class="inline-block">{{ animatedGreeting }}</span> -->
-        <span class="blink ml-0 mr-1">|</span>
+        <!-- <span class="blink ml-0 mr-1">|</span> -->
         <span> I'm {{ name }},</span>
       </h1>
       <h2 class="text-2xl mt-2">{{ title }}</h2>

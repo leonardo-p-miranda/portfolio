@@ -89,7 +89,7 @@
     {
       "title": "Real Estate Sales Application (Venando)",
       "description": "A next-gen property listing platform with advanced search, filtering, and SEO optimization.",
-      "stack": "Vue, Nuxt, Node, TailwindCSS",
+      "stack": "React, PHP, TailwindCSS",
       "demoUrl": "https://venando.dk"
     },
     {

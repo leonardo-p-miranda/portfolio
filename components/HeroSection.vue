@@ -4,7 +4,7 @@
   >
     <div class="max-w-2xl mx-auto">
       <h1 class="text-4xl font-bold">
-        <span class="inline-block">{{ animatedGreeting }}</span>
+        <!-- <span class="inline-block">{{ animatedGreeting }}</span> -->
         <span class="blink ml-0 mr-1">|</span>
         <span> I'm {{ name }},</span>
       </h1>
@@ -52,34 +52,34 @@ const typingSpeed = 300;
 const eraseSpeed = 200;
 const pauseTime = 2000;
 
-function typeGreeting() {
-  const greeting = greetings[currentGreetingIndex];
-  let i = 0;
+// function typeGreeting() {
+//   const greeting = greetings[currentGreetingIndex];
+//   let i = 0;
 
-  const typeInterval = setInterval(() => {
-    animatedGreeting.value = greeting.slice(0, i++);
-    if (i > greeting.length) {
-      clearInterval(typeInterval);
-      setTimeout(eraseGreeting, pauseTime);
-    }
-  }, typingSpeed);
-}
+//   const typeInterval = setInterval(() => {
+//     animatedGreeting.value = greeting.slice(0, i++);
+//     if (i > greeting.length) {
+//       clearInterval(typeInterval);
+//       setTimeout(eraseGreeting, pauseTime);
+//     }
+//   }, typingSpeed);
+// }
 
-function eraseGreeting() {
-  let i = animatedGreeting.value.length;
-  const eraseInterval = setInterval(() => {
-    animatedGreeting.value = animatedGreeting.value.slice(0, --i);
-    if (i === 0) {
-      clearInterval(eraseInterval);
-      currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
-      setTimeout(typeGreeting, typingSpeed);
-    }
-  }, eraseSpeed);
-}
+// function eraseGreeting() {
+//   let i = animatedGreeting.value.length;
+//   const eraseInterval = setInterval(() => {
+//     animatedGreeting.value = animatedGreeting.value.slice(0, --i);
+//     if (i === 0) {
+//       clearInterval(eraseInterval);
+//       currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+//       setTimeout(typeGreeting, typingSpeed);
+//     }
+//   }, eraseSpeed);
+// }
 
-onMounted(() => {
-  typeGreeting();
-});
+// onMounted(() => {
+//   typeGreeting();
+// });
 </script>
 
 <style scoped>

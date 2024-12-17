@@ -8,7 +8,7 @@
           class="text-2xl font-bold text-blue-600 hover:text-blue-800"
         >
           
-        <img src="public/assets/img/logo.svg" alt="Logo" class="h-12 w-auto">
+        <img src="/assets/img/logo.svg" alt="Logo" class="h-12 w-auto">
         </NuxtLink>
         <nav class="space-x-6">
           <NuxtLink to="/" class="hover:text-blue-600 transition"

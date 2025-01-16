@@ -1,6 +1,6 @@
 {
   "name": "Leo Miranda",
-  "title": "Fullstack Developer",
+  "title": "Senior Fullstack Developer",
   "location": "Belo Horizonte, MG, Brazil",
   "email": "dev.leonardomiranda@gmail.com",
   "linkedin": "https://linkedin.com/in/leonardopmiranda",
@@ -8,11 +8,23 @@
   "summary": "Software Engineer experienced in building high-traffic applications using modern stacks like Vue, Nuxt, Node, and React. Highly engaged in Agile methodologies, xTreme Programming, and contributing to the Erlang/Elixir community.",
   "experience": [
     {
-      "role": "Software Engineer (Fullstack)",
+      "role": "Senior Software Engineer (Fullstack)",
+      "company": "Forlex",
+      "link": "https://forlex.com.br/",
+      "location": "Brazil",
+      "duration": "Dec 2024 - Present",
+      "stack": "Vue 3, Node, Nuxt 3, NuxtUI, AI, NLP, NoSQL, BFF, Extreme Programming",
+      "responsibilities": [
+        "Developed a chatbot for a legal firm, using AI and NLP to answer questions and provide legal advice",
+        "Helped the company to improve its delivery speed, code quality, and reliability"
+      ]
+    },
+    {
+      "role": "Midlevel/Senior Software Engineer (Fullstack)",
       "company": "O Novo Mercado",
       "link": "https://www.onovomercado.com.br/",
       "location": "Brazil",
-      "duration": "Nov 2022 - Present",
+      "duration": "Nov 2022 - Dec 2024",
       "stack": "Vue 3, Node, Nuxt 3, React, NoSQL, Agile, Extreme Programming",
       "responsibilities": [
         "Developed and optimized frontend solutions for a high-traffic VOD platform",

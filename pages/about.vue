@@ -10,7 +10,7 @@
         <div ref="narrativeEl" class="grid grid-cols-[1fr_280px] gap-16 items-start opacity-0">
           <div class="flex flex-col gap-6">
             <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
-              I'm Leo Miranda, a Senior Product Engineer based in Belo Horizonte, Brazil.
+              I'm Leo Miranda, a Senior Product Engineer based in Belo Horizonte, Brazil <img src="https://flagcdn.com/16x12/br.png" alt="Brazil" class="inline-block align-middle mb-0.5" width="16" height="12" />.
               I've spent the last 8 years building products at companies where engineering
               directly moves business outcomes. From a 300k MAU VOD platform to a
               landing page system that drove a 23% lift in lead conversion at a
@@ -18,17 +18,16 @@
             </p>
             <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
               My bias is toward leverage. I introduced Amplitude-driven experimentation
-              at O Novo Mercado, led the Platform Chapter at Fit Energia to raise
+              at O Novo Mercado, led the Platform Chapter at Fit Energia ⚡ to raise
               engineering standards across teams, and spent a year at the compiler level
-              with José Valim's team building branch coverage tooling for Elixir.
+              with José Valim's team building branch coverage tooling for Elixir 🔬.
               These aren't the same kind of work. But the instinct behind them is.
             </p>
             <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
               I work best in teams that care about the craft and the outcome equally.
               Real XP discipline (not the watered-down kind) is how I've shipped
-              consistently without burning the codebase down. Four languages (English,
-              Danish, Spanish, French) mean the "international" in my experience
-              isn't just a line on a CV.
+              consistently without burning the codebase down. Four languages mean the
+              "international" in my experience isn't just a line on a CV.
             </p>
           </div>
           <div class="relative photo-wrap" style="transform: rotate(-1.5deg); transition: transform 0.4s ease;">
@@ -84,9 +83,9 @@
         <div>
           <h2 class="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-muted mb-6">Languages</h2>
           <ul class="flex flex-col gap-3 list-none p-0">
-            <li v-for="lang in data?.languages" :key="lang" class="flex items-center gap-3 text-[0.9375rem]">
-              <span class="w-1.5 h-1.5 rounded-full bg-tertiary flex-shrink-0" />
-              {{ lang }}
+            <li v-for="lang in languages" :key="lang.label" class="flex items-center gap-3 text-[0.9375rem]">
+              <img :src="`https://flagcdn.com/16x12/${lang.flag}.png`" :alt="lang.label" width="16" height="12" class="flex-shrink-0" />
+              <span>{{ lang.label }}</span>
             </li>
           </ul>
         </div>
@@ -117,6 +116,14 @@ import dataJson from '~/public/data.json'
 if (import.meta.client) gsap.registerPlugin(ScrollTrigger)
 
 const data = dataJson
+
+const languages = [
+  { flag: 'br', label: 'Portuguese (Native)' },
+  { flag: 'gb', label: 'English C2' },
+  { flag: 'dk', label: 'Danish C2' },
+  { flag: 'es', label: 'Spanish C1' },
+  { flag: 'fr', label: 'French B2' },
+]
 
 const labelEl = ref<HTMLElement | null>(null)
 const titleEl = ref<HTMLElement | null>(null)

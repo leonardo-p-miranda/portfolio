@@ -82,12 +82,12 @@
         </div>
         <div>
           <h2 class="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-muted mb-6">Languages</h2>
-          <ul class="flex flex-col gap-3 list-none p-0">
-            <li v-for="lang in languages" :key="lang.label" class="flex items-center gap-3 text-[0.9375rem]">
+          <div class="flex flex-wrap gap-2">
+            <span v-for="lang in languages" :key="lang.label" class="flex items-center gap-2 font-mono text-[0.7rem] tracking-[0.08em] uppercase px-3 py-1.5 border border-border text-muted hover:border-accent hover:text-accent transition-colors">
               <img :src="`https://flagcdn.com/16x12/${lang.flag}.png`" :alt="lang.label" width="16" height="12" class="flex-shrink-0" />
-              <span>{{ lang.label }}</span>
-            </li>
-          </ul>
+              {{ lang.label }}
+            </span>
+          </div>
         </div>
       </div>
     </section>

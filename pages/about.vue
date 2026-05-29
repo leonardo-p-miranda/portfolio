@@ -31,15 +31,16 @@
               isn't just a line on a CV.
             </p>
           </div>
-          <div class="relative">
+          <div class="relative photo-wrap" style="transform: rotate(-1.5deg); transition: transform 0.4s ease;">
             <div class="aspect-[3/4] overflow-hidden">
               <img
                 src="/assets/img/leo-miranda.jpg"
                 alt="Leo Miranda"
-                class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                class="w-full h-full object-cover object-top"
               />
             </div>
             <div class="absolute -bottom-3 -right-3 w-full h-full border border-[var(--color-border)] -z-10" />
+            <div class="absolute top-0 left-0 w-1 h-full bg-tertiary" />
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@
           <h2 class="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-muted mb-6">Languages</h2>
           <ul class="flex flex-col gap-3 list-none p-0">
             <li v-for="lang in data?.languages" :key="lang" class="flex items-center gap-3 text-[0.9375rem]">
-              <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary flex-shrink-0" />
               {{ lang }}
             </li>
           </ul>
@@ -134,6 +135,8 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.photo-wrap:hover { transform: rotate(0deg) !important; }
+
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
   .timeline-item { grid-template-columns: 1fr !important; gap: 0.5rem !important; }

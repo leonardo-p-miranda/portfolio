@@ -10,7 +10,22 @@
           <div class="flex flex-wrap gap-2 mb-8">
             <span v-for="tag in project.stack" :key="tag" class="font-mono text-[0.65rem] tracking-[0.1em] uppercase px-2.5 py-1.5 border border-[var(--color-border)] text-muted">{{ tag }}</span>
           </div>
-          <a v-if="project.demoUrl" :href="project.demoUrl" target="_blank" rel="noopener" class="text-[0.9375rem] font-medium text-[var(--color-text)] no-underline border-b border-[var(--color-text)] pb-px hover:text-accent hover:border-accent transition-colors">View live project ↗</a>
+          <a v-if="project.demoUrl && !project.videoUrl" :href="project.demoUrl" target="_blank" rel="noopener" class="text-[0.9375rem] font-medium text-[var(--color-text)] no-underline border-b border-[var(--color-text)] pb-px hover:text-accent hover:border-accent transition-colors">View live project ↗</a>
+        </div>
+      </section>
+
+      <section v-if="project.videoUrl" class="px-8 pt-16 pb-0">
+        <div class="max-w-[1200px] mx-auto">
+          <p class="font-mono text-[0.7rem] tracking-[0.14em] uppercase text-muted mb-4">Demo</p>
+          <div class="relative w-full max-w-[720px]" style="padding-bottom: 56.25%;">
+            <iframe
+              :src="project.videoUrl"
+              class="absolute inset-0 w-full h-full border border-[var(--color-border)]"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="Project demo"
+            />
+          </div>
         </div>
       </section>
 

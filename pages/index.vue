@@ -29,7 +29,7 @@
 
       <div ref="scrollHintEl" class="absolute bottom-10 left-8 flex items-center gap-4 opacity-0">
         <span class="font-mono text-[0.7rem] tracking-[0.14em] uppercase text-muted">scroll</span>
-        <span class="w-12 h-px bg-muted block" />
+        <span class="w-12 h-px bg-tertiary block" />
       </div>
     </section>
 

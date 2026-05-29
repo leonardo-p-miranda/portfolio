@@ -7,6 +7,7 @@ role: Research Developer
 stack: ["Elixir", "Erlang", "BEAM VM", "Compiler Engineering"]
 duration: Feb 2022 – Feb 2023
 demoUrl: https://dcc.ufmg.br/compiladores/
+videoUrl: https://www.youtube.com/embed/vQUGxQqZ6as
 featured: true
 cover: /assets/img/work/erlang-cover.jpg
 summary: A year at the compiler level. Built branch coverage tooling for the Erlang VM in collaboration with José Valim (creator of Elixir) and the Dashbit team, extending ExCoveralls to track branch-level execution paths across Elixir production codebases worldwide.

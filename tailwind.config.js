@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         accent: 'var(--color-accent)',
+        tertiary: 'var(--color-tertiary)',
         muted: 'var(--color-text-muted)',
         border: 'var(--color-border)',
       },

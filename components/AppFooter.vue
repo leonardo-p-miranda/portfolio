@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-[var(--color-border)] px-8 py-8">
+  <footer class="border-t border-border px-8 py-8">
     <div class="max-w-[1200px] mx-auto flex items-center justify-between">
       <NuxtLink to="/" aria-label="Leo Miranda — Home">
         <img src="/assets/img/logo.svg" alt="Leo Logo" class="h-8 w-auto hover:opacity-70 transition-opacity" />

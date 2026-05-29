@@ -9,7 +9,7 @@
   >
     <template #tags>
       <div class="flex flex-wrap gap-2 mb-8">
-        <span v-for="tag in project?.stack" :key="tag" class="font-mono text-[0.65rem] tracking-[0.1em] uppercase px-2.5 py-1.5 border border-[var(--color-border)] text-muted">{{ tag }}</span>
+        <span v-for="tag in project?.stack" :key="tag" class="font-mono text-[0.65rem] tracking-[0.1em] uppercase px-2.5 py-1.5 border border-border text-muted">{{ tag }}</span>
       </div>
     </template>
   </ContentDetail>

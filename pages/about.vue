@@ -38,7 +38,7 @@
                 class="w-full h-full object-cover object-top"
               />
             </div>
-            <div class="absolute -bottom-3 -right-3 w-full h-full border border-[var(--color-border)] -z-10" />
+            <div class="absolute -bottom-3 -right-3 w-full h-full border border-border -z-10" />
             <div class="absolute top-0 left-0 w-1 h-full bg-tertiary" />
           </div>
         </div>
@@ -49,8 +49,8 @@
     <section class="px-8 py-24 bg-neutral-50">
       <div class="max-w-[1200px] mx-auto">
         <h2 class="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-muted mb-8">Experience</h2>
-        <div class="border-t border-[var(--color-border)]">
-          <div v-for="(job, i) in data?.experience" :key="i" class="timeline-item grid grid-cols-[220px_1fr] gap-8 py-10 border-b border-[var(--color-border)]">
+        <div class="border-t border-border">
+          <div v-for="(job, i) in data?.experience" :key="i" class="timeline-item grid grid-cols-[220px_1fr] gap-8 py-10 border-b border-border">
             <div class="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted pt-1">{{ job.duration }}</div>
             <div>
               <h3 class="font-display font-semibold text-[clamp(1.05rem,1.8vw,1.3rem)] tracking-tight mb-1">{{ job.role }}</h3>
@@ -58,7 +58,7 @@
               <span v-else class="text-[0.875rem] text-muted block mb-3">{{ job.company }}</span>
               <p class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-accent mb-4">{{ job.stack }}</p>
               <ul v-if="job.responsibilities.length" class="flex flex-col gap-1.5 list-none p-0">
-                <li v-for="(r, j) in job.responsibilities" :key="j" class="text-[0.9375rem] text-muted leading-relaxed pl-5 relative before:content-['—'] before:absolute before:left-0 before:text-[var(--color-border)]">{{ r }}</li>
+                <li v-for="(r, j) in job.responsibilities" :key="j" class="text-[0.9375rem] text-muted leading-relaxed pl-5 relative before:content-['—'] before:absolute before:left-0 before:text-border">{{ r }}</li>
               </ul>
             </div>
           </div>
@@ -75,7 +75,7 @@
             <div v-for="(items, category) in data?.skills" :key="category">
               <p class="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-accent mb-2">{{ category }}</p>
               <div class="flex flex-wrap gap-2">
-                <span v-for="skill in items" :key="skill" class="font-mono text-[0.7rem] tracking-[0.08em] uppercase px-3 py-1.5 border border-[var(--color-border)] text-muted hover:border-accent hover:text-accent transition-colors">{{ skill }}</span>
+                <span v-for="skill in items" :key="skill" class="font-mono text-[0.7rem] tracking-[0.08em] uppercase px-3 py-1.5 border border-border text-muted hover:border-accent hover:text-accent transition-colors">{{ skill }}</span>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
     <section class="px-8 py-24 bg-neutral-50">
       <div class="max-w-[1200px] mx-auto">
         <h2 class="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-muted mb-8">Education</h2>
-        <div class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-px bg-border border border-border">
           <div v-for="(edu, i) in data?.education" :key="i" class="bg-white p-8 flex flex-col gap-2">
             <p class="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted">{{ edu.period }}</p>
             <p class="font-display font-semibold text-xl tracking-tight">{{ edu.degree }}</p>

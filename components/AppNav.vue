@@ -2,13 +2,13 @@
   <header class="fixed top-0 left-0 right-0 z-[100] px-8 py-6 transition-all duration-400">
     <div
       class="flex items-center justify-between max-w-[1200px] mx-auto transition-all duration-400"
-      :class="scrolled ? 'bg-white/90 backdrop-blur-md rounded-full px-5 py-2 shadow-sm border border-[var(--color-border)]' : ''"
+      :class="scrolled ? 'bg-white/90 backdrop-blur-md rounded-full px-5 py-2 shadow-sm border border-border' : ''"
     >
       <NuxtLink to="/" aria-label="Leo Miranda — Home">
         <img src="/assets/img/logo.svg" alt="LM" class="h-8 w-auto block opacity-100 hover:opacity-60 transition-opacity" />
       </NuxtLink>
       <nav class="flex items-center gap-8">
-        <NuxtLink v-for="link in links" :key="link.to" :to="link.to" class="nav-link text-sm font-medium tracking-wide text-[var(--color-text)] no-underline relative hover:text-accent transition-colors">
+        <NuxtLink v-for="link in links" :key="link.to" :to="link.to" class="nav-link text-sm font-medium tracking-wide text-ink no-underline relative hover:text-accent transition-colors">
           {{ link.label }}
         </NuxtLink>
       </nav>

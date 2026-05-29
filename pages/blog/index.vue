@@ -10,12 +10,12 @@
     </section>
 
     <section class="px-8 pb-28">
-      <div class="max-w-[1200px] mx-auto border-t border-[var(--color-border)]">
+      <div class="max-w-[1200px] mx-auto border-t border-border">
         <NuxtLink
           v-for="post in posts"
           :key="post._path"
           :to="`/blog/${post.slug}`"
-          class="post-row flex items-center gap-8 py-10 border-b border-[var(--color-border)] no-underline text-[var(--color-text)] transition-all hover:px-3 hover:-mx-3 hover:bg-neutral-50 opacity-0"
+          class="post-row flex items-center gap-8 py-10 border-b border-border no-underline text-ink transition-all hover:px-3 hover:-mx-3 hover:bg-neutral-50 opacity-0"
         >
           <div class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-muted w-16 shrink-0 hidden sm:block">{{ formatDate(post.date) }}</div>
           <div class="flex-1">

@@ -3,16 +3,9 @@
     <!-- Hero -->
     <section class="min-h-svh flex items-center px-8 pt-32 pb-16 relative">
       <div class="max-w-[1200px] mx-auto w-full">
-        <h1 class="font-display font-bold text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.03em] text-[var(--color-text)] m-0">
+        <h1 class="font-display font-bold text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.03em] text-ink m-0">
           <span class="block">
-            <span ref="word0" class="inline-block opacity-0 flip-card" tabindex="-1">
-              <span class="flip-inner">
-                <span class="flip-front">Leo</span>
-                <span class="flip-back">
-                  <img src="/assets/img/logo.svg" alt="Leo Miranda" class="w-full h-auto" style="margin-left: -14%; width: calc(100% + 14%);" />
-                </span>
-              </span>
-            </span>
+            <span ref="word0" class="inline-block opacity-0">Leo</span>
           </span>
           <span class="block overflow-hidden">
             <span ref="word1" class="inline-block opacity-0">Miranda</span>
@@ -23,11 +16,11 @@
           <div class="font-mono text-[0.8125rem] tracking-[0.12em] uppercase text-muted mb-3 flex items-center gap-3 flex-wrap">
             <span class="relative inline-block">
               <span ref="titleTextEl">Senior Product Engineer</span>
-              <span ref="strikeEl" class="absolute top-1/2 left-0 h-px bg-[var(--color-text)] w-0 -translate-y-1/2" />
+              <span ref="strikeEl" class="absolute top-1/2 left-0 h-px bg-ink w-0 -translate-y-1/2" />
             </span>
             <span ref="builderEl" class="text-accent opacity-0 -translate-y-1 inline-block">builder<span class="text-accent">.</span></span>
           </div>
-          <p class="text-[clamp(1.1rem,2.2vw,1.5rem)] font-light leading-relaxed max-w-[520px] text-[var(--color-text)]">
+          <p class="text-[clamp(1.1rem,2.2vw,1.5rem)] font-light leading-relaxed max-w-[520px] text-ink">
             Built right, shipped fast,
             <span class="text-accent font-medium">measured honestly.</span>
           </p>
@@ -63,12 +56,12 @@
         <div ref="workHeadEl" class="mb-14">
           <h2 class="font-mono text-[0.75rem] tracking-[0.14em] uppercase text-muted">Selected Work</h2>
         </div>
-        <div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-px bg-border border border-border">
           <NuxtLink
             v-for="project in featuredProjects"
             :key="project._path"
             :to="`/work/${project.slug}`"
-            class="bg-white p-10 flex flex-col gap-3 no-underline text-[var(--color-text)] hover:bg-neutral-50 transition-colors"
+            class="bg-white p-10 flex flex-col gap-3 no-underline text-ink hover:bg-neutral-50 transition-colors"
           >
             <div class="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted">{{ project.stack?.slice(0, 3).join(' · ') }}</div>
             <h3 class="font-display font-semibold text-[clamp(1.2rem,2vw,1.6rem)] leading-tight tracking-tight">{{ project.title }}</h3>
@@ -89,7 +82,7 @@
           Let's build something<br /><em class="italic text-accent">worth building.</em>
         </h2>
         <div class="flex gap-8 justify-center items-center flex-wrap mt-10">
-          <a :href="`mailto:${data?.email}`" class="inline-block px-8 py-3.5 bg-[var(--color-text)] text-white font-medium text-[0.9375rem] tracking-wide no-underline hover:bg-accent transition-colors">Send an email</a>
+          <a :href="`mailto:${data?.email}`" class="inline-block px-8 py-3.5 bg-ink text-white font-medium text-[0.9375rem] tracking-wide no-underline hover:bg-accent transition-colors">Send an email</a>
           <a :href="data?.linkedin" target="_blank" rel="noopener" class="underline-link">LinkedIn →</a>
         </div>
       </div>
@@ -143,41 +136,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.flip-card {
-  perspective: 600px;
-  cursor: default;
-}
-
-.flip-inner {
-  display: inline-block;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.flip-card:hover .flip-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-front,
-.flip-back {
-  display: inline-flex;
-  align-items: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.flip-back {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 30%;
-  transform: rotateY(180deg) translateY(-50%);
-  height: auto;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
 .underline-link {
   font-size: 0.9375rem;
   font-weight: 500;

@@ -7,28 +7,40 @@
         <h1 ref="titleEl" class="font-display font-bold text-[clamp(2rem,4vw,3.5rem)] tracking-tight leading-[1.05] mb-12 opacity-0">
           Engineer by craft.<br /><em class="italic text-accent">Product thinker by habit.</em>
         </h1>
-        <div ref="narrativeEl" class="flex flex-col gap-6 max-w-[680px] opacity-0">
-          <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
-            I'm Leo Miranda, a Senior Product Engineer based in Belo Horizonte, Brazil.
-            I've spent the last 8 years building products at companies where engineering
-            directly moves business outcomes. From a 300k MAU VOD platform to a
-            landing page system that drove a 23% lift in lead conversion at a
-            Santander Group company.
-          </p>
-          <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
-            My bias is toward leverage. I introduced Amplitude-driven experimentation
-            at O Novo Mercado, led the Platform Chapter at Fit Energia to raise
-            engineering standards across teams, and spent a year at the compiler level
-            with José Valim's team building branch coverage tooling for Elixir.
-            These aren't the same kind of work. But the instinct behind them is.
-          </p>
-          <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
-            I work best in teams that care about the craft and the outcome equally.
-            Real XP discipline (not the watered-down kind) is how I've shipped
-            consistently without burning the codebase down. Four languages (English,
-            Danish, Spanish, French) mean the "international" in my experience
-            isn't just a line on a CV.
-          </p>
+        <div ref="narrativeEl" class="grid grid-cols-[1fr_280px] gap-16 items-start opacity-0">
+          <div class="flex flex-col gap-6">
+            <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
+              I'm Leo Miranda, a Senior Product Engineer based in Belo Horizonte, Brazil.
+              I've spent the last 8 years building products at companies where engineering
+              directly moves business outcomes. From a 300k MAU VOD platform to a
+              landing page system that drove a 23% lift in lead conversion at a
+              Santander Group company.
+            </p>
+            <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
+              My bias is toward leverage. I introduced Amplitude-driven experimentation
+              at O Novo Mercado, led the Platform Chapter at Fit Energia to raise
+              engineering standards across teams, and spent a year at the compiler level
+              with José Valim's team building branch coverage tooling for Elixir.
+              These aren't the same kind of work. But the instinct behind them is.
+            </p>
+            <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
+              I work best in teams that care about the craft and the outcome equally.
+              Real XP discipline (not the watered-down kind) is how I've shipped
+              consistently without burning the codebase down. Four languages (English,
+              Danish, Spanish, French) mean the "international" in my experience
+              isn't just a line on a CV.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                src="/assets/img/leo-miranda.jpg"
+                alt="Leo Miranda"
+                class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
+            <div class="absolute -bottom-3 -right-3 w-full h-full border border-[var(--color-border)] -z-10" />
+          </div>
         </div>
       </div>
     </section>
@@ -126,5 +138,6 @@ onMounted(() => {
   .grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
   .timeline-item { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
   section { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+  .grid-cols-\[1fr_280px\] { grid-template-columns: 1fr !important; }
 }
 </style>

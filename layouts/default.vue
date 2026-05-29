@@ -12,9 +12,7 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
-import dataJson from '~/public/data.json'
-
-const { data } = await useAsyncData('globalData', () => dataJson)
+const data = useResumeData()
 const curtain = ref<HTMLElement | null>(null)
 
 const router = useRouter()

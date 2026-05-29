@@ -110,12 +110,8 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import dataJson from '~/public/data.json'
-
-if (import.meta.client) gsap.registerPlugin(ScrollTrigger)
-
-const data = dataJson
+import { useReveal } from '~/composables/useReveal'
+const data = useResumeData()
 
 const languages = [
   { flag: 'br', label: 'Portuguese (Native)' },
@@ -128,12 +124,11 @@ const languages = [
 const labelEl = ref<HTMLElement | null>(null)
 const titleEl = ref<HTMLElement | null>(null)
 const narrativeEl = ref<HTMLElement | null>(null)
+const { heroEntrance } = useReveal()
 
 onMounted(() => {
-  gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .fromTo(labelEl.value, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6 })
-    .fromTo(titleEl.value, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.2')
-    .fromTo(narrativeEl.value, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.3')
+  heroEntrance(labelEl, titleEl)
+  gsap.fromTo(narrativeEl.value, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.4, ease: 'power3.out' })
 
   document.querySelectorAll('.timeline-item').forEach(el =>
     gsap.fromTo(el, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.6, scrollTrigger: { trigger: el, start: 'top 85%' } })

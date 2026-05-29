@@ -31,22 +31,18 @@
 </template>
 
 <script setup lang="ts">
-import { gsap } from 'gsap'
+import { useReveal } from '~/composables/useReveal'
 
 const { data: posts } = await useAsyncData('allPosts', () => queryContent('blog').sort({ date: -1 }).find())
 
 const labelEl = ref<HTMLElement | null>(null)
 const titleEl = ref<HTMLElement | null>(null)
+const { heroEntrance, stagger } = useReveal()
 
 const formatDate = (d: string) => d ? new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) : ''
 
 onMounted(() => {
-  gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .fromTo(labelEl.value, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6 })
-    .fromTo(titleEl.value, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.2')
-
-  document.querySelectorAll('.post-row').forEach((el, i) =>
-    gsap.fromTo(el, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.55, delay: 0.3 + i * 0.1, ease: 'power3.out' })
-  )
+  heroEntrance(labelEl, titleEl)
+  stagger('.post-row', 0.3, 0.1)
 })
 </script>

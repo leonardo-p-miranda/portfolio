@@ -31,20 +31,16 @@
 </template>
 
 <script setup lang="ts">
-import { gsap } from 'gsap'
+import { useReveal } from '~/composables/useReveal'
 
 const { data: projects } = await useAsyncData('allWork', () => queryContent('work').sort({ order: 1 }).find())
 
 const labelEl = ref<HTMLElement | null>(null)
 const titleEl = ref<HTMLElement | null>(null)
+const { heroEntrance, stagger } = useReveal()
 
 onMounted(() => {
-  gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .fromTo(labelEl.value, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6 })
-    .fromTo(titleEl.value, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.2')
-
-  document.querySelectorAll('.project-row').forEach((el, i) =>
-    gsap.fromTo(el, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.55, delay: 0.3 + i * 0.08, ease: 'power3.out' })
-  )
+  heroEntrance(labelEl, titleEl)
+  stagger('.project-row')
 })
 </script>

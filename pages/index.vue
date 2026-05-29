@@ -4,8 +4,15 @@
     <section class="min-h-svh flex items-center px-8 pt-32 pb-16 relative">
       <div class="max-w-[1200px] mx-auto w-full">
         <h1 class="font-display font-bold text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.03em] text-[var(--color-text)] m-0">
-          <span class="block overflow-hidden">
-            <span ref="word0" class="inline-block opacity-0">Leo</span>
+          <span class="block">
+            <span ref="word0" class="inline-block opacity-0 flip-card" tabindex="-1">
+              <span class="flip-inner">
+                <span class="flip-front">Leo</span>
+                <span class="flip-back">
+                  <img src="/assets/img/logo.svg" alt="Leo Miranda" class="w-full h-auto" style="margin-left: -14%; width: calc(100% + 14%);" />
+                </span>
+              </span>
+            </span>
           </span>
           <span class="block overflow-hidden">
             <span ref="word1" class="inline-block opacity-0">Miranda</span>
@@ -22,7 +29,7 @@
           </div>
           <p class="text-[clamp(1.1rem,2.2vw,1.5rem)] font-light leading-relaxed max-w-[520px] text-[var(--color-text)]">
             Built right, shipped fast,
-            <span ref="kineticEl" class="inline-block text-accent font-medium">measured honestly.</span>
+            <span class="text-accent font-medium">measured honestly.</span>
           </p>
         </div>
       </div>
@@ -92,13 +99,8 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import dataJson from '~/public/data.json'
-
-if (import.meta.client) gsap.registerPlugin(ScrollTrigger)
-
-// static JSON — no async needed, avoids TS inference issues with useAsyncData
-const data = dataJson
+import { useReveal } from '~/composables/useReveal'
+const data = useResumeData()
 
 const { data: projects } = await useAsyncData('featuredWork', () =>
   queryContent('work').where({ featured: true }).sort({ order: 1 }).find()
@@ -108,7 +110,6 @@ const featuredProjects = computed(() => projects.value ?? [])
 const word0 = ref<HTMLElement | null>(null)
 const word1 = ref<HTMLElement | null>(null)
 const subEl = ref<HTMLElement | null>(null)
-const kineticEl = ref<HTMLElement | null>(null)
 const scrollHintEl = ref<HTMLElement | null>(null)
 const titleTextEl = ref<HTMLElement | null>(null)
 const strikeEl = ref<HTMLElement | null>(null)
@@ -117,6 +118,8 @@ const workHeadEl = ref<HTMLElement | null>(null)
 const aboutLabelEl = ref<HTMLElement | null>(null)
 const aboutTextEl = ref<HTMLElement | null>(null)
 const ctaEl = ref<HTMLElement | null>(null)
+
+const { reveal } = useReveal()
 
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
@@ -127,10 +130,6 @@ onMounted(() => {
     .to(titleTextEl.value, { opacity: 0.35, duration: 0.2 }, '<')
     .fromTo(builderEl.value, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.5)' }, '-=0.1')
 
-  gsap.to(kineticEl.value, { y: -5, duration: 1.8, ease: 'sine.inOut', yoyo: true, repeat: -1 })
-
-  const reveal = (el: Element | null, opts = {}) =>
-    el && gsap.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, scrollTrigger: { trigger: el, start: 'top 82%' }, ...opts })
 
   reveal(workHeadEl.value)
   reveal(aboutLabelEl.value)
@@ -144,6 +143,41 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.flip-card {
+  perspective: 600px;
+  cursor: default;
+}
+
+.flip-inner {
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  display: inline-flex;
+  align-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-back {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+  transform: rotateY(180deg) translateY(-50%);
+  height: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .underline-link {
   font-size: 0.9375rem;
   font-weight: 500;

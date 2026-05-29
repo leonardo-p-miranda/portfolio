@@ -6,7 +6,7 @@ company: Fit Energia · Santander Group
 role: Senior Product Engineer (Squad Lead)
 stack: ["Next.js", "Ruby on Rails", "PostHog", "TypeScript", "A/B Testing", "Edge Optimization", "CI/CD"]
 duration: Jun 2025 – Present
-demoUrl: https://lp.fiservicos.com.br/
+demoUrl: https://lp.fitservicos.com.br/
 featured: true
 cover: /assets/img/work/fit-energia-cover.jpg
 summary: End-to-end ownership of a high-conversion landing page platform for a Santander Group energy company. From product discovery through to a 23% lift in lead conversion via A/B testing and feature flagging.

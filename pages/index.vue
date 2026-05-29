@@ -82,7 +82,7 @@
           Let's build something<br /><em class="italic text-accent">worth building.</em>
         </h2>
         <div class="flex gap-8 justify-center items-center flex-wrap mt-10">
-          <a :href="`mailto:${data?.email}`" class="inline-block px-8 py-3.5 bg-ink text-white font-medium text-[0.9375rem] tracking-wide no-underline hover:bg-accent transition-colors">Send an email</a>
+          <a :href="`mailto:${data?.email}`" class="inline-block px-8 py-3.5 text-white font-medium text-[0.9375rem] tracking-wide no-underline bg-accent transition-colors">Send an email</a>
           <a :href="data?.linkedin" target="_blank" rel="noopener" class="underline-link">LinkedIn →</a>
         </div>
       </div>

@@ -1,42 +1,29 @@
 <template>
-  <div class="flex flex-col min-h-screen font-sans text-gray-900">
-    <!-- Global Header -->
-    <header class="bg-white border-b py-4">
-      <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
-        <NuxtLink
-          to="/"
-          class="text-2xl font-bold text-blue-600 hover:text-blue-800"
-        >
-          
-        <img src="/assets/img/logo.svg" alt="Logo" class="h-12 w-auto">
-        </NuxtLink>
-        <nav class="space-x-6">
-          <NuxtLink to="/" class="hover:text-blue-600 transition"
-            >Home</NuxtLink
-          >
-          <NuxtLink to="/about" class="hover:text-blue-600 transition"
-            >About</NuxtLink
-          >
-        </nav>
-      </div>
-    </header>
-
-    <main class="flex-grow">
-      <NuxtPage />
+  <div>
+    <AppCursor />
+    <AppNav />
+    <div ref="curtain" class="fixed inset-0 bg-accent z-[9000] -translate-x-full pointer-events-none will-change-transform" aria-hidden="true" />
+    <main class="min-h-screen">
+      <slot />
     </main>
-
-    <Footer v-if="data" :name="data?.name" />
-    <div v-else-if="error" class="text-center py-12 text-red-500">
-      Error loading data
-    </div>
-    <div v-else class="text-center py-12 text-gray-500">Loading...</div>
+    <AppFooter v-if="data" :github="data.github" :linkedin="data.linkedin" :email="data.email" />
   </div>
 </template>
 
 <script setup lang="ts">
-
+import { gsap } from 'gsap'
 import dataJson from '~/public/data.json'
 
-const { data } = await useAsyncData("globalData", () => dataJson)
+const { data } = await useAsyncData('globalData', () => dataJson)
+const curtain = ref<HTMLElement | null>(null)
 
+const router = useRouter()
+router.beforeEach(() => {
+  const el = curtain.value
+  if (!el) return
+  gsap.timeline()
+    .set(el, { x: '-101%' })
+    .to(el, { x: '0%', duration: 0.45, ease: 'power3.inOut' })
+    .to(el, { x: '101%', duration: 0.45, ease: 'power3.inOut', delay: 0.05 })
+})
 </script>

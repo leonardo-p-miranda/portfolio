@@ -116,7 +116,7 @@ const data = useResumeData()
 const languages = [
   { flag: 'br', label: 'Portuguese (Native)' },
   { flag: 'gb', label: 'English C2' },
-  { flag: 'dk', label: 'Danish C2' },
+  { flag: 'dk', label: 'Danish C1' },
   { flag: 'es', label: 'Spanish C1' },
   { flag: 'fr', label: 'French B2' },
 ]

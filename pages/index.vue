@@ -14,10 +14,7 @@
 
         <div ref="subEl" class="mt-10 opacity-0">
           <div class="font-mono text-[0.8125rem] tracking-[0.12em] uppercase text-muted mb-3 flex items-center gap-3 flex-wrap">
-            <span class="relative inline-block">
-              <span ref="titleTextEl">Senior Product Engineer</span>
-              <span ref="strikeEl" class="absolute top-1/2 left-0 h-px bg-ink w-0 -translate-y-1/2" />
-            </span>
+            <span ref="titleTextEl" class="inline-block">Senior Product Engineer</span>
             <span ref="builderEl" class="text-accent opacity-0 -translate-y-1 inline-block">builder<span class="text-accent">.</span></span>
           </div>
           <p class="text-[clamp(1.1rem,2.2vw,1.5rem)] font-light leading-relaxed max-w-[520px] text-ink">
@@ -105,7 +102,6 @@ const word1 = ref<HTMLElement | null>(null)
 const subEl = ref<HTMLElement | null>(null)
 const scrollHintEl = ref<HTMLElement | null>(null)
 const titleTextEl = ref<HTMLElement | null>(null)
-const strikeEl = ref<HTMLElement | null>(null)
 const builderEl = ref<HTMLElement | null>(null)
 const workHeadEl = ref<HTMLElement | null>(null)
 const aboutLabelEl = ref<HTMLElement | null>(null)
@@ -119,8 +115,7 @@ onMounted(() => {
   tl.fromTo([word0.value, word1.value], { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12 })
     .fromTo(subEl.value, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.3')
     .fromTo(scrollHintEl.value, { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.2')
-    .to(strikeEl.value, { width: '100%', duration: 0.5, ease: 'power2.inOut' }, '+=0.6')
-    .to(titleTextEl.value, { opacity: 0.35, duration: 0.2 }, '<')
+    .to(titleTextEl.value, { opacity: 0.35, duration: 0.4 }, '+=0.6')
     .fromTo(builderEl.value, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.5)' }, '-=0.1')
 
 

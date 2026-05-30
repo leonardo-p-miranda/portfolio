@@ -4,8 +4,8 @@
       class="flex items-center justify-between max-w-[1200px] mx-auto transition-all duration-400"
       :class="isScrolled ? 'bg-white/90 backdrop-blur-md rounded-full px-5 py-2 shadow-sm border border-border' : ''"
     >
-      <NuxtLink to="/" aria-label="Leo Miranda — Home">
-        <img src="/assets/img/logo.svg" alt="LM" class="h-8 w-auto block opacity-100 hover:opacity-60 transition-opacity" />
+      <NuxtLink to="/" aria-label="Leo Miranda — Home" class="text-ink hover:text-accent transition-colors">
+        <AppLogo class="h-8 w-auto block" />
       </NuxtLink>
       <nav class="flex items-center gap-8">
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to" class="nav-link text-sm font-medium tracking-wide text-ink no-underline relative hover:text-accent transition-colors">

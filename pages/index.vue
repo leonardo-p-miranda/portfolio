@@ -5,10 +5,10 @@
       <div class="max-w-[1200px] mx-auto w-full">
         <h1 class="font-display font-bold text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.03em] text-ink m-0">
           <span class="block">
-            <span ref="word0" class="inline-block opacity-0">Leo</span>
+            <span ref="firstNameEl" class="inline-block opacity-0">Leo</span>
           </span>
           <span class="block overflow-hidden">
-            <span ref="word1" class="inline-block opacity-0">Miranda</span>
+            <span ref="lastNameEl" class="inline-block opacity-0">Miranda</span>
           </span>
         </h1>
 
@@ -97,8 +97,8 @@ const { data: projects } = await useAsyncData('featuredWork', () =>
 )
 const featuredProjects = computed(() => projects.value ?? [])
 
-const word0 = ref<HTMLElement | null>(null)
-const word1 = ref<HTMLElement | null>(null)
+const firstNameEl = ref<HTMLElement | null>(null)
+const lastNameEl = ref<HTMLElement | null>(null)
 const subEl = ref<HTMLElement | null>(null)
 const scrollHintEl = ref<HTMLElement | null>(null)
 const titleTextEl = ref<HTMLElement | null>(null)
@@ -112,7 +112,7 @@ const { reveal } = useReveal()
 
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-  tl.fromTo([word0.value, word1.value], { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12 })
+  tl.fromTo([firstNameEl.value, lastNameEl.value], { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12 })
     .fromTo(subEl.value, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.3')
     .fromTo(scrollHintEl.value, { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.2')
     .to(titleTextEl.value, { opacity: 0.35, duration: 0.4 }, '+=0.6')

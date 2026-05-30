@@ -2,7 +2,7 @@
   <header class="fixed top-0 left-0 right-0 z-[100] px-8 py-6 transition-all duration-400">
     <div
       class="flex items-center justify-between max-w-[1200px] mx-auto transition-all duration-400"
-      :class="scrolled ? 'bg-white/90 backdrop-blur-md rounded-full px-5 py-2 shadow-sm border border-border' : ''"
+      :class="isScrolled ? 'bg-white/90 backdrop-blur-md rounded-full px-5 py-2 shadow-sm border border-border' : ''"
     >
       <NuxtLink to="/" aria-label="Leo Miranda — Home">
         <img src="/assets/img/logo.svg" alt="LM" class="h-8 w-auto block opacity-100 hover:opacity-60 transition-opacity" />
@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-const scrolled = ref(false)
+const isScrolled = ref(false)
 const links = [
   { to: '/work', label: 'Work' },
   { to: '/about', label: 'About' },
@@ -25,7 +25,7 @@ const links = [
 ]
 
 onMounted(() => {
-  const onScroll = () => { scrolled.value = window.scrollY > 60 }
+  const onScroll = () => { isScrolled.value = window.scrollY > 60 }
   window.addEventListener('scroll', onScroll, { passive: true })
   onUnmounted(() => window.removeEventListener('scroll', onScroll))
 })

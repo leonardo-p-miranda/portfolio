@@ -2,7 +2,7 @@
   <div>
     <AppCursor />
     <AppNav />
-    <div ref="curtain" class="fixed inset-0 bg-accent z-[9000] -translate-x-full pointer-events-none will-change-transform" aria-hidden="true" />
+    <div ref="curtainEl" class="fixed inset-0 bg-accent z-[9000] -translate-x-full pointer-events-none will-change-transform" aria-hidden="true" />
     <main class="min-h-screen">
       <slot />
     </main>
@@ -13,11 +13,11 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 const data = useResumeData()
-const curtain = ref<HTMLElement | null>(null)
+const curtainEl = ref<HTMLElement | null>(null)
 
 const router = useRouter()
 router.beforeEach(() => {
-  const el = curtain.value
+  const el = curtainEl.value
   if (!el) return
   gsap.timeline()
     .set(el, { x: '-101%' })

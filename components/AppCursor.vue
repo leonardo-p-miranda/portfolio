@@ -1,23 +1,23 @@
 <template>
   <div v-if="!isTouchDevice">
-    <div ref="cursorOuter" class="fixed w-8 h-8 rounded-full pointer-events-none z-[9999]" />
-    <div ref="cursorDot" class="fixed w-1.5 h-1.5 rounded-full pointer-events-none z-[9999]" />
+    <div ref="cursorOuterEl" class="fixed w-8 h-8 rounded-full pointer-events-none z-[9999]" />
+    <div ref="cursorDotEl" class="fixed w-1.5 h-1.5 rounded-full pointer-events-none z-[9999]" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
 
-const cursorOuter = ref<HTMLElement | null>(null)
-const cursorDot = ref<HTMLElement | null>(null)
+const cursorOuterEl = ref<HTMLElement | null>(null)
+const cursorDotEl = ref<HTMLElement | null>(null)
 const isTouchDevice = ref(false)
 
 onMounted(() => {
   isTouchDevice.value = window.matchMedia('(hover: none) and (pointer: coarse)').matches
   if (isTouchDevice.value) return
 
-  const outer = cursorOuter.value!
-  const dot = cursorDot.value!
+  const outer = cursorOuterEl.value!
+  const dot = cursorDotEl.value!
 
   gsap.set(outer, {
     xPercent: -50, yPercent: -50,

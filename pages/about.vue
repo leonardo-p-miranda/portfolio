@@ -29,6 +29,11 @@
               consistently without burning the codebase down. Four languages mean the
               "international" in my experience isn't just a line on a CV.
             </p>
+            <p class="text-[clamp(1rem,1.6vw,1.125rem)] leading-[1.8]">
+              Off the clock, I'm usually at a table tennis table 🏓, slowly teaching
+              myself another language, or cooking something that takes way longer than
+              it probably should 🍳.
+            </p>
           </div>
           <div class="relative photo-wrap" style="transform: rotate(-1.5deg); transition: transform 0.4s ease;">
             <div class="aspect-[3/4] overflow-hidden">

@@ -54,7 +54,7 @@
             <div class="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted pt-1">{{ job.duration }}</div>
             <div>
               <h3 class="font-display font-semibold text-[clamp(1.05rem,1.8vw,1.3rem)] tracking-tight mb-1">{{ job.role }}</h3>
-              <a v-if="job.link" :href="job.link" target="_blank" rel="noopener" class="text-[0.875rem] text-muted hover:text-accent transition-colors block mb-3 no-underline">{{ job.company }} ↗</a>
+              <a v-if="job.link" :href="job.link" target="_blank" rel="noopener" class="text-[0.875rem] text-muted hover:text-accent transition-colors block mb-3 no-underline">{{ job.company }} ↗︎</a>
               <span v-else class="text-[0.875rem] text-muted block mb-3">{{ job.company }}</span>
               <p class="font-mono text-[0.7rem] tracking-[0.08em] uppercase text-accent mb-4">{{ job.stack }}</p>
               <ul v-if="job.responsibilities.length" class="flex flex-col gap-1.5 list-none p-0">

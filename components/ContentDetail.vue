@@ -8,7 +8,7 @@
           <h1 ref="titleEl" class="font-display font-bold text-[clamp(1.75rem,4vw,3.5rem)] tracking-tight leading-[1.05] max-w-[900px] mb-6 opacity-0">{{ content.title }}</h1>
           <p class="text-[clamp(1rem,1.8vw,1.25rem)] text-muted leading-[1.7] max-w-[680px]" :class="{ 'mb-8': $slots.tags || demoUrl || videoUrl }">{{ content.summary }}</p>
           <slot name="tags" />
-          <a v-if="demoUrl && !videoUrl" :href="demoUrl" target="_blank" rel="noopener" class="inline-block text-[0.9375rem] font-medium text-ink no-underline border-b border-ink pb-px hover:text-accent hover:border-accent transition-colors">View live project ↗</a>
+          <a v-if="demoUrl && !videoUrl" :href="demoUrl" target="_blank" rel="noopener" class="inline-block text-[0.9375rem] font-medium text-ink no-underline border-b border-ink pb-px hover:text-accent hover:border-accent transition-colors">View live project ↗︎</a>
         </div>
       </section>
 

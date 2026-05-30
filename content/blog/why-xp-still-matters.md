@@ -46,4 +46,4 @@ Most teams don't want to pay that cost. The ones that do tend to build things th
 
 ---
 
-*I've worked with XP teams at O Novo Mercado and FIT. Both experiences shaped how I think about software quality and delivery speed. I'm happy to talk shop. [Reach out](mailto:dev.leonardomiranda@gmail.com) if you want to compare notes.*
+*I've worked with XP teams at O Novo Mercado and FIT. Both experiences shaped how I think about software quality and delivery speed. I'm happy to talk shop. [Reach out](mailto:me@leomiranda.dev) if you want to compare notes.*

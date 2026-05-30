@@ -50,3 +50,18 @@ Conventional commits: `feat(scope):`, `fix(scope):`, `chore(scope):`, `style(sco
 ### Token system
 
 All colours and fonts must reference a CSS token (`ink`, `canvas`, `accent`, `muted`, `border`, `tertiary`, `font-display`, `font-body`, `font-mono`). No raw hex values or font names in component code.
+
+### Variable naming
+
+Names describe the thing, never its position or type. No single letters, no abbreviations.
+
+| Kind | Rule | Example |
+|---|---|---|
+| `v-for` item | singular noun for one element | `post in posts`, `job in data.experience` |
+| `v-for` index | only when actually used in the body; name it `<noun>Index` — never `i`/`j` | `(project, projectIndex)` |
+| `:key` | a stable, unique value from the data; build a composite with backticks if no single field is unique. Use the index as a key only for static string lists that never reorder | `:key="project._path"`, `` :key="`${job.company}-${job.duration}`" `` |
+| Template ref (DOM el) | describe the element + `El` suffix; never number them | `titleEl`, `firstNameEl` (not `word0`) |
+| Boolean ref/computed | `is`/`has`/`should` prefix | `isScrolled`, `isTouchDevice` |
+| Reactive data | descriptive camelCase noun | `featuredProjects` |
+
+camelCase for variables/functions, PascalCase for components.

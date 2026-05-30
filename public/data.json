@@ -8,6 +8,7 @@
   "summary": "Senior Product Engineer with 8+ years of experience building scalable, high-traffic products. Proven track record of driving business growth through modular architectures and data-driven experimentation. Expert in bridging the gap between complex technical requirements and user-centric product goals.",
   "experience": [
     {
+      "id": "fit-energia",
       "role": "Senior Product Engineer (Squad Lead)",
       "company": "Fit Energia · Santander Group",
       "link": "https://fitenergia.com.br/",
@@ -24,6 +25,7 @@
       ]
     },
     {
+      "id": "forlex",
       "role": "Senior Product Engineer",
       "company": "Forlex",
       "link": "https://forlex.ai/about",
@@ -37,6 +39,7 @@
       ]
     },
     {
+      "id": "o-novo-mercado",
       "role": "Senior Product Engineer",
       "company": "O Novo Mercado",
       "link": "https://www.onovomercado.com.br/",
@@ -51,6 +54,7 @@
       ]
     },
     {
+      "id": "backbone-agency",
       "role": "Mid-Level Fullstack Engineer",
       "company": "Backbone Agency",
       "link": "https://venando.dk/",
@@ -63,6 +67,7 @@
       ]
     },
     {
+      "id": "convenia",
       "role": "Junior Frontend Engineer",
       "company": "Convenia",
       "link": "https://convenia.com.br/",
@@ -75,6 +80,7 @@
       ]
     },
     {
+      "id": "navi",
       "role": "Junior Frontend Engineer",
       "company": "NAVI",
       "link": "https://www.navi.ifrn.edu.br/",
@@ -103,20 +109,48 @@
   ],
   "education": [
     {
+      "id": "ufmg-cs",
       "degree": "B.Sc. Computer Science",
       "institution": "UFMG",
       "period": "2021 – 2025"
     },
     {
+      "id": "ifrn-web-dev",
       "degree": "Certificate in Web Development",
       "institution": "IFRN – Natal Campus",
       "period": "2016 – 2020"
     }
   ],
   "skills": {
-    "core": ["Vue 3", "Nuxt 3", "React", "TypeScript", "Ruby on Rails", "Node.js"],
-    "testing": ["Vitest", "Vue Test Utils", "Storybook", "Histoire", "XP Practices"],
-    "product": ["A/B Testing", "Feature Flagging", "Amplitude", "PostHog", "CI/CD", "Design Systems"]
+    "core": [
+      "Vue 3",
+      "Nuxt 3",
+      "React",
+      "TypeScript",
+      "Ruby on Rails",
+      "Node.js"
+    ],
+    "testing": [
+      "Vitest",
+      "Vue Test Utils",
+      "Storybook",
+      "Histoire",
+      "XP Practices"
+    ],
+    "product": [
+      "A/B Testing",
+      "Feature Flagging",
+      "Amplitude",
+      "PostHog",
+      "CI/CD",
+      "Design Systems"
+    ]
   },
-  "languages": ["Portuguese (Native)", "English C2", "Danish C2", "Spanish C1", "French B2"]
+  "languages": [
+    "Portuguese (Native)",
+    "English C2",
+    "Danish C2",
+    "Spanish C1",
+    "French B2"
+  ]
 }

@@ -68,7 +68,7 @@ The full mobile parity decision (vs graceful degradation for animations) added b
 
 The most important work wasn't technical. It was figuring out what the site should actually say.
 
-The old site called me a "Senior Fullstack Developer." That's accurate but inert. The new site calls me a "Senior Product Engineer" and the hero animation crosses it out to reveal "builder." The tagline is "Built right, shipped fast, measured honestly." Three words each, three things that are actually true about how I work.
+The old site called me a "Senior Fullstack Developer." That's accurate but inert. The new site calls me a "Senior Product Engineer" and the hero animation fades that back to reveal "builder." The tagline is "I build things that work — and prove that they do." A word and a sentence, both actually true about how I work.
 
 Getting that right took longer than the GSAP animations.
 

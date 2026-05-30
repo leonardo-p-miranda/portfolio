@@ -18,8 +18,8 @@
             <span ref="builderEl" class="text-accent opacity-0 -translate-y-1 inline-block">builder<span class="text-accent">.</span></span>
           </div>
           <p class="text-[clamp(1.1rem,2.2vw,1.5rem)] font-light leading-relaxed max-w-[520px] text-ink">
-            Built right, shipped fast,
-            <span class="text-accent font-medium">measured honestly.</span>
+            I build things that work,
+            <span class="text-accent font-medium">and prove that they do.</span>
           </p>
         </div>
       </div>

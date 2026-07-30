@@ -8,6 +8,22 @@
   "summary": "Senior Product Engineer with 8+ years of experience building scalable, high-traffic products. Proven track record of driving business growth through modular architectures and data-driven experimentation. Expert in bridging the gap between complex technical requirements and user-centric product goals.",
   "experience": [
     {
+      "id": "mevi",
+      "role": "Founder & Principal Engineer",
+      "company": "Mevi",
+      "link": "https://mevi.pro/",
+      "location": "Brazil",
+      "duration": "Aug 2025 – Present",
+      "stack": "Rails 8, Vue 3, Inertia.js, TypeScript, PostgreSQL, Tailwind v4, Solid Queue, Kamal",
+      "responsibilities": [
+        "Building a Brazilian SaaS for medical clinic management end to end: scheduling, electronic medical records, care orchestration, patient self-booking and subscription billing",
+        "Architected a multi-tenant Rails 8 monolith with PostgreSQL Row-Level Security and an in-database transactional event bus, keeping clinical data strictly scoped per organization under LGPD",
+        "Designed a server-driven SPA with Inertia.js and Vue 3, avoiding a separate API layer while keeping a fully typed frontend and a shadcn-based design system",
+        "Documented every non-obvious decision as an ADR (24 and counting) and backed the domain with 170+ RSpec suites, making the codebase navigable for both humans and AI agents",
+        "Ship to production with Kamal on a single-command deploy, from database provisioning to zero-downtime container swap"
+      ]
+    },
+    {
       "id": "fit-energia",
       "role": "Senior Product Engineer (Squad Lead)",
       "company": "Fit Energia · Santander Group",

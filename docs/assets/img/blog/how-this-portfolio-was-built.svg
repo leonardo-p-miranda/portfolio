@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" fill="none" role="img" aria-label="A browser window being rebuilt from wireframe blocks">
+  <rect width="1200" height="460" fill="#ffffff"/>
+
+  <!-- decorative dotted grid -->
+  <g fill="#e5e5e5">
+    <circle cx="80" cy="80" r="3"/><circle cx="140" cy="80" r="3"/><circle cx="200" cy="80" r="3"/>
+    <circle cx="80" cy="140" r="3"/><circle cx="140" cy="140" r="3"/>
+    <circle cx="1120" cy="380" r="3"/><circle cx="1060" cy="380" r="3"/><circle cx="1000" cy="380" r="3"/>
+    <circle cx="1120" cy="320" r="3"/><circle cx="1060" cy="320" r="3"/>
+  </g>
+
+  <!-- incoming block being assembled (dashed) -->
+  <g>
+    <rect x="120" y="150" width="150" height="100" rx="8" fill="#ffffff" stroke="#0001dc" stroke-width="3" stroke-dasharray="8 8"/>
+    <line x1="195" y1="180" x2="195" y2="220" stroke="#0001dc" stroke-width="4" stroke-linecap="round"/>
+    <line x1="175" y1="200" x2="215" y2="200" stroke="#0001dc" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- browser window -->
+  <rect x="320" y="70" width="640" height="320" rx="16" fill="#ffffff" stroke="#0a0a0a" stroke-width="3"/>
+  <line x1="320" y1="120" x2="960" y2="120" stroke="#0a0a0a" stroke-width="3"/>
+  <circle cx="352" cy="95" r="7" fill="#0001dc"/>
+  <circle cx="378" cy="95" r="7" fill="#ffffff" stroke="#0a0a0a" stroke-width="2"/>
+  <circle cx="404" cy="95" r="7" fill="#ffffff" stroke="#0a0a0a" stroke-width="2"/>
+  <rect x="470" y="85" width="450" height="20" rx="10" fill="#f3f3f3"/>
+
+  <!-- wireframe layout inside -->
+  <rect x="352" y="152" width="280" height="40" rx="4" fill="#0001dc"/>
+  <rect x="352" y="208" width="380" height="11" rx="5" fill="#e5e5e5"/>
+  <rect x="352" y="230" width="300" height="11" rx="5" fill="#e5e5e5"/>
+  <rect x="352" y="284" width="170" height="74" rx="6" fill="#ffffff" stroke="#e5e5e5" stroke-width="3"/>
+  <rect x="542" y="284" width="170" height="74" rx="6" fill="#ffffff" stroke="#e5e5e5" stroke-width="3"/>
+  <rect x="732" y="284" width="170" height="74" rx="6" fill="#ffffff" stroke="#e5e5e5" stroke-width="3"/>
+
+  <!-- v2 badge -->
+  <g transform="rotate(-6 980 110)">
+    <rect x="912" y="92" width="84" height="40" rx="6" fill="#0a0a0a"/>
+    <text x="954" y="119" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">v2</text>
+  </g>
+
+  <!-- caption -->
+  <text x="120" y="410" font-family="'JetBrains Mono', monospace" font-size="20" fill="#555555">// rebuilt in a single session</text>
+</svg>

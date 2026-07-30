@@ -4,6 +4,7 @@ slug: why-xp-still-matters
 date: 2025-01-15
 summary: Extreme Programming gets dismissed as a relic, but the teams I've worked with that actually practice it (really practice it) consistently ship better software. Here's what that actually looks like.
 readingTime: 5 min
+cover: /assets/img/blog/why-xp-still-matters.svg
 ---
 
 Extreme Programming has a branding problem.

@@ -4,6 +4,7 @@
     back-to="/blog"
     back-label="All posts"
     :meta="formatMeta(post)"
+    :cover-url="post?.cover"
   />
 </template>
 

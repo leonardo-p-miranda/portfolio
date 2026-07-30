@@ -4,6 +4,7 @@ slug: how-this-portfolio-was-built
 date: 2026-05-29
 summary: From a broken npm install to a full redesign in a single session. The decisions behind the stack, the design, and the content strategy for this site.
 readingTime: 4 min
+cover: /assets/img/blog/how-this-portfolio-was-built.svg
 ---
 
 Most portfolio posts are tutorials. This one is a decisions log.

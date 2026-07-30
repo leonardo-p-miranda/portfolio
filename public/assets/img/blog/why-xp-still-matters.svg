@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" fill="none" role="img" aria-label="The red, green, refactor cycle of extreme programming">
+  <rect width="1200" height="460" fill="#ffffff"/>
+
+  <!-- faint XP watermark -->
+  <text x="600" y="430" font-family="'Syne', system-ui, sans-serif" font-size="380" font-weight="800" fill="#f4f4f4" text-anchor="middle" letter-spacing="-10">XP</text>
+
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" markerWidth="7" markerHeight="7" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0001dc"/>
+    </marker>
+  </defs>
+
+  <!-- cycle arrows (clockwise: red -> green -> refactor -> red) -->
+  <g fill="none" stroke="#0001dc" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ah)">
+    <path d="M645,195 Q790,215 742,286"/>
+    <path d="M724,330 Q600,402 478,330"/>
+    <path d="M462,292 Q428,205 556,193"/>
+  </g>
+
+  <!-- nodes -->
+  <circle cx="600" cy="150" r="56" fill="#ffffff" stroke="#0a0a0a" stroke-width="3.5"/>
+  <circle cx="780" cy="330" r="56" fill="#ffffff" stroke="#0a0a0a" stroke-width="3.5"/>
+  <circle cx="420" cy="330" r="56" fill="#ffffff" stroke="#0a0a0a" stroke-width="3.5"/>
+
+  <!-- node 1: RED — failing test (✗) -->
+  <g stroke="#0a0a0a" stroke-width="6" stroke-linecap="round">
+    <line x1="582" y1="132" x2="618" y2="168"/>
+    <line x1="618" y1="132" x2="582" y2="168"/>
+  </g>
+
+  <!-- node 2: GREEN — passing test (✓) -->
+  <polyline points="758,330 773,346 804,312" fill="none" stroke="#0001dc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- node 3: REFACTOR — recycle arc -->
+  <path d="M420,312 A18 18 0 1 1 402,332" fill="none" stroke="#0001dc" stroke-width="5" stroke-linecap="round" marker-end="url(#ah)"/>
+
+  <!-- labels -->
+  <g font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#0a0a0a" text-anchor="middle">
+    <text x="600" y="68">RED</text>
+    <text x="780" y="424">GREEN</text>
+    <text x="420" y="424">REFACTOR</text>
+  </g>
+
+  <!-- caption -->
+  <text x="110" y="120" font-family="'JetBrains Mono', monospace" font-size="20" fill="#555555">// not a checklist —</text>
+  <text x="110" y="148" font-family="'JetBrains Mono', monospace" font-size="20" fill="#555555">// a discipline</text>
+</svg>

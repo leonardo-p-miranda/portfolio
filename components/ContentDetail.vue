@@ -12,6 +12,12 @@
         </div>
       </section>
 
+      <section v-if="coverUrl" class="px-8 pt-12">
+        <div class="max-w-[1200px] mx-auto">
+          <img :src="coverUrl" :alt="`${content.title} cover`" class="w-full block border border-border" loading="lazy" />
+        </div>
+      </section>
+
       <section v-if="videoUrl" class="px-8 pt-16 pb-0">
         <div class="max-w-[1200px] mx-auto">
           <p class="font-mono text-[0.7rem] tracking-[0.14em] uppercase text-muted mb-4">Demo</p>
@@ -56,6 +62,7 @@ defineProps<{
   backTo: string
   backLabel: string
   meta: string
+  coverUrl?: string
   demoUrl?: string
   videoUrl?: string
 }>()
